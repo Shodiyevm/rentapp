@@ -2,12 +2,11 @@
         <!-- Start Footer -->
         <footer class="relative bg-slate-900 dark:bg-slate-800 mt-24">
             <div class="container relative">
-            
+
 
             </div><!--end container-->
 
-         
-        </footer><!--end footer-->
+        </footer>
         <!-- End Footer -->
         <!-- Switcher -->
         <div class="fixed top-1/4 -left-2 z-3">
@@ -22,7 +21,7 @@
         </div>
         <!-- Switcher -->
 
-        
+
 
 
             <!-- Footer Start -->
@@ -53,11 +52,8 @@
         <script src="assets/libs/tiny-slider/min/tiny-slider.js"></script>
         <script src="assets/libs/tobii/js/tobii.min.js"></script>
         <script src="assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
-        <script src="assets/js/easy_background.js"></script>
         <script src="assets/libs/feather-icons/feather.min.js"></script>
-        <script src="assets/js/plugins.init.js"></script>
-        <script src="assets/js/app.js"></script>
-        <!-- JAVASCRIPTS -->
+        @vite('resources/js/app.js')
 
         <script>
             easy_background("#home",

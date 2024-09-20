@@ -11,7 +11,7 @@
     <meta name="email" content="support@shreethemes.in" />
     <meta name="version" content="2.2.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    @vite('resources/css/app.css')
+   
     <!-- favicon -->
     <link rel="shortcut icon" href="/assets/images/favicon.ico" />
 
@@ -23,7 +23,7 @@
     <!-- Main Css -->
     <link href="/assets/libs/@iconscout/unicons/css/line.css" type="text/css" rel="stylesheet" />
     <link href="/assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/assets/css/tailwind.css" />
+    @vite('resources/css/app.css')
 
 </head>
 <body class="dark:bg-slate-900">

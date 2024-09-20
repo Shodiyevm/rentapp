@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Ad extends Model
+class Branch extends Model
 {
     use HasFactory;
-public function branch()
-{
-return $this->belongsTo(Branch::class);
-}
+    public function ads()
+    {
+    return $this->hasMany(Ad::class);
+    }
 }
