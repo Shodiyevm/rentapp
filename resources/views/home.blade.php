@@ -1,5 +1,5 @@
 
-     <x-layouts.main>
+<x-layouts.main>
         <!-- Hero Start -->
         <section class="relative mt-20">
             <div class="container-fluid md:mx-4 mx-2">
@@ -95,7 +95,7 @@
 
 
 
-            @foreach ($ads as $ad):
+            @foreach ($ads as $ad)
 
                 <div class="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
                     <div class="relative">
@@ -138,9 +138,9 @@
                     </div>
                 </div><!--end property content-->
 
-            @endforeach;
+            @endforeach
 
         </div><!--end container-->
-  </section><!--end section-->
-     </x-layouts.main>
+   </section><!--end section-->
+</x-layouts.main>
 

@@ -1,6 +1,7 @@
 
+
+
 <x-layouts.main>
-    <!-- Start -->
 <section class="relative md:py-24 pt-24 pb-16">
     <div class="container relative">
         <div class="grid md:grid-cols-12 grid-cols-1 gap-[30px]">
@@ -8,8 +9,8 @@
                 <div class="grid grid-cols-1 relative">
                     <div class="tiny-one-item">
                         <div class="tiny-slide">
-{{--                            <img src="{{$ad->image}}"--}}
-                                 class="rounded-md shadow dark:shadow-gray-700" alt="">
+                            <img src="{{$ad->image}}"
+                              class="rounded-md shadow dark:shadow-gray-700" alt="">
                         </div>
 
                         <div class="tiny-slide">
@@ -34,7 +35,7 @@
                     </div>
                 </div>
 
-                <h4 class="text-2xl font-medium mt-6 mb-3">{{$ads->title}}</h4>
+                <h4 class="text-2xl font-medium mt-6 mb-3"><?php echo $ad->title;?>
                 <span class="text-slate-400 flex items-center"><i data-feather="map-pin" class="size-5 me-2"></i><?= $ad->address;?></span>
 
                 <ul class="py-6 flex items-center list-none">

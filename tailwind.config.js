@@ -1,14 +1,19 @@
+import defaultTheme from 'tailwindcss/defaultTheme';
+import forms from '@tailwindcss/forms';
 const colors = require('tailwindcss/colors')
 const plugin = require('tailwindcss/plugin')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
-      "./src/**/*.{html,js}",
-      "./node_modules/tw-elements/dist/js/**/*.js",
-      "./resources/**/*.blade.php",
-      "./resources/**/*.js",
-      "./resources/**/*.vue",
-
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+        './storage/framework/views/*.php',
+        './resources/views/**/*.blade.php',
+        "./src/**/*.{html,js}",
+        "./node_modules/tw-elements/dist/js/**/*.js",
+        "./resources/**/*.blade.php",
+        "./resources/**/*.js",
+        "./resources/**/*.vue",
     ],
     darkMode: 'class',
     important: true,
@@ -36,7 +41,6 @@ module.exports = {
         fontFamily: {
             'body': ['"League Spartan", sans-serif'],
         },
-
 
         extend: {
             screens: {
@@ -69,21 +73,21 @@ module.exports = {
             },
 
             height: ({
-                theme
-            }) => ({
+                         theme
+                     }) => ({
                 '10.5': '2.625rem',
                 '85': '21.25rem',
             }),
             width: ({
-                theme
-            }) => ({
+                        theme
+                    }) => ({
                 '10.5': '2.625rem',
             }),
 
             maxWidth: ({
-                theme,
-                breakpoints
-            }) => ({
+                           theme,
+                           breakpoints
+                       }) => ({
                 '1200': '71.25rem',
                 '992': '60rem',
                 '768': '45rem',
@@ -99,8 +103,9 @@ module.exports = {
     },
 
     plugins: [
+        forms,
         require("@tailwindcss/forms")({
-          strategy: 'class', 
+            strategy: 'class', // only generate classes
         }),
     ],
-}
+};

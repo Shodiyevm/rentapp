@@ -43,10 +43,9 @@ class AdController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $id): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory
     {
-        $ads= Ad::find($id);
-        return view('components.single-ad',compact('ads'));
+        return view('components.single-ad', ['ad'=>Ad::query()->find($id)]);
     }
 
     /**
@@ -80,4 +79,9 @@ class AdController extends Controller
         return view('home', compact('ads','branches'));
 
     }
+    public function contact()
+    {
+        return view('components.contact');
+    }
+
 }

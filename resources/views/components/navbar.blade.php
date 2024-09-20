@@ -53,7 +53,7 @@
 
                 </li>
 
-                <li><a href="admin/branches" class="sub-menu-item">Branch</a></li>
+                <li><a href="/branches" class="sub-menu-item">Branch</a></li>
 
                 <li><a href="/contact" class="sub-menu-item">contact</a></li>
                 <li><a href="/ads/create" class="sub-menu-item">elon qo'shish</a></li>

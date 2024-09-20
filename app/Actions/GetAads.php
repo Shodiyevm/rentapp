@@ -12,5 +12,6 @@ public function __invoke()
  $ads=Ad::all();
  $branches=Branch::all();
  return view('home' ,['ads'=>$ads,'branches'=>$branches]);
+
 }
 }
