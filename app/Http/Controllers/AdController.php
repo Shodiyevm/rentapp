@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Ad;
 use App\Models\Branch;
+use App\Models\Status;
 use Faker\Factory;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -29,7 +30,7 @@ class AdController extends Controller
      */
     public function create()
     {
-        //
+        return view('components.create-ad');
     }
 
     /**
@@ -71,17 +72,17 @@ class AdController extends Controller
     {
         //
     }
-    public function find(Illuminate\Http\Client\Request $request): View|Factory|Application {
+    public function find(Request $request): View|Factory|Application
+    {
+        $ads = \App\Models\Branch::query()->find($request->branch_id)->ads;
 
-        $ads=\App\Models\Branch::query()->find($request->branch_id)->ads();
-
-        $branches=\App\Models\Branch::all();
-        return view('home', compact('ads','branches'));
-
+        $branches = \App\Models\Branch::all();
+        return view('home', compact('ads', 'branches'));
     }
     public function contact()
     {
         return view('components.contact');
     }
+
 
 }

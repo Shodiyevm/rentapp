@@ -49,14 +49,10 @@
                                                            <option value="">Filial</option>
                                                              @foreach ($branches as $branch) :
                                                              <option value={{$branch->id}}>{{ $branch->name }}</option>
-                                                            @endforeach;
-
+                                                            @endforeach
                                                         </select>
                                                     </div>
                                                 </div>
-
-
-
                                                 <div>
                                                     <label for="buy-min-price" class="form-label font-medium text-slate-900 dark:text-white">Min Price :</label>
                                                     <div class="filter-search-form relative filter-border mt-2">
@@ -123,7 +119,7 @@
                         <ul class="py-6 border-y border-slate-100 dark:border-gray-800 flex items-center list-none">
                             <li class="flex items-center me-4">
                                 <i class="uil uil-users-alt icons text-2xl me-2 text-green-600"></i>
-                                {{-- <span>{{ $ad->description }} </span> --}}
+                                 <span>{{ $ad->gender}} </span>
                             </li>
 
 

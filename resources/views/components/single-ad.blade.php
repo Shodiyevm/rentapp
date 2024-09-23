@@ -1,6 +1,4 @@
 
-
-
 <x-layouts.main>
 <section class="relative md:py-24 pt-24 pb-16">
     <div class="container relative">
@@ -9,8 +7,8 @@
                 <div class="grid grid-cols-1 relative">
                     <div class="tiny-one-item">
                         <div class="tiny-slide">
-                            <img src="{{$ad->image}}"
-                              class="rounded-md shadow dark:shadow-gray-700" alt="">
+{{--                            <img src="{{$ad->image}}"--}}
+{{--                              class="rounded-md shadow dark:shadow-gray-700" alt="">--}}
                         </div>
 
                         <div class="tiny-slide">
@@ -39,20 +37,18 @@
                 <span class="text-slate-400 flex items-center"><i data-feather="map-pin" class="size-5 me-2"></i><?= $ad->address;?></span>
 
                 <ul class="py-6 flex items-center list-none">
-                    <li class="flex items-center lg:me-6 me-4">
-                        <i class="uil uil-compress-arrows lg:text-3xl text-2xl me-2 text-green-600"></i>
-                        <span class="lg:text-xl">8000sqf</span>
-                    </li>
+
 
                     <li class="flex items-center lg:me-6 me-4">
-                        <i class="uil uil-bed-double lg:text-3xl text-2xl me-2 text-green-600"></i>
+                        <i class="uil uil-home lg:text-3xl text-2xl me-2 text-green-600"></i>
                         <span class="lg:text-xl"><?= $ad->rooms;?> xona</span>
                     </li>
 
-                    <li class="flex items-center">
-                        <i class="uil uil-bath lg:text-3xl text-2xl me-2 text-green-600"></i>
-                        <span class="lg:text-xl">4 Baths</span>
+                    <li class="flex items-center me-4">
+                        <i class="uil uil-users-alt icons text-2xl me-2 text-green-600"></i>
+                        <span>{{ $ad->gender}} </span>
                     </li>
+
                 </ul>
 
                 <p class="text-slate-400"><?= $ad->description;?></p>
@@ -67,18 +63,16 @@
                 <div class="sticky top-20">
                     <div class="rounded-md bg-slate-50 dark:bg-slate-800 shadow dark:shadow-gray-700">
                         <div class="p-6">
-                            <h5 class="text-2xl font-medium">Narxi: <?= $ad->price;?></h5>
+                            <h5 class="text-2xl font-medium">Narxi: <?= $ad->price;?>$</h5>
 
                             <div class="flex justify-between items-center mt-4">
-                                <span class="text-xl font-medium">$ <?= $ad->price;?></span>
 
-                                <span class="bg-green-600/10 text-green-600 text-sm px-2.5 py-0.75 rounded h-6"><?= $ad->status_name;?></span>
                             </div>
 
                             <ul class="list-none mt-4">
                                 <li class="flex justify-between items-center">
-                                    <span class="text-slate-400 text-sm">Days on Hously</span>
-                                    <span class="font-medium text-sm">124 Days</span>
+                                    <span class="text-slate-400 text-sm">status</span>
+                                    <span class="font-medium text-sm">{{$ad->name}}</span>
                                 </li>
 
                                 <li class="flex justify-between items-center mt-2">

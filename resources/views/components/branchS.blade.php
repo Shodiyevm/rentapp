@@ -23,7 +23,7 @@
 
                 <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-6">
 
-                   @foreach ($ads  as $ad):?>
+                   @foreach ($ads  as $ad)
                     <div class="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
                         <div class="relative">
 
@@ -50,8 +50,8 @@
                             </ul>
                         </div>
                     </div><!--end property content-->
-                    <?php
-                    endforeach; ?>
+
+                   @endforeach;
                 </div><!--en grid-->
 
 
