@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Branch extends Model
 {
     use HasFactory;
-    public function ads()
+    public function ads(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
     return $this->hasMany(Ad::class);
     }

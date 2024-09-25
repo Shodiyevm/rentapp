@@ -6,12 +6,9 @@ use App\Http\Controllers\BranchController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
+Route::get('/', \App\Actions\GetAads::class);
 Route::get('ads/create',[App\Http\Controllers\AdController::class,'create']);
-Route::get('/ads', \App\Actions\GetAads::class);
 Route::get('/ads/{id}' ,[AdController::class,'show']);
 Route::resource('ads', \App\Http\Controllers\AdController::class);
 Route::get('/search',[\App\Http\Controllers\AdController::class ,'find']);
