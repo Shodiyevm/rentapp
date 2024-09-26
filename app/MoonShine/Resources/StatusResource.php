@@ -22,6 +22,7 @@ class StatusResource extends ModelResource
     protected string $model = Status::class;
 
     protected string $title = 'Statuses';
+    public string $column="name";
 
     /**
      * @return list<MoonShineComponent|Field>
