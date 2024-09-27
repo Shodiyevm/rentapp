@@ -1,5 +1,6 @@
 <x-layouts.main>
-
+           <br>
+          <br>
         <div class="container-fluid relative px-3">
             <div class="layout-specing">
                 <!-- Start Content -->
@@ -51,7 +52,7 @@
                                         <i data-feather="mail" class="fea icon-ex-md text-slate-400 me-3"></i>
                                         <div class="flex-1">
                                             <h6 class="text-green-600 dark:text-white font-medium mb-0">Email :</h6>
-                                            <a href="" class="text-slate-400"><?= $user->username ?></a>
+                                            <a href="" class="text-slate-400"><?= $user->name ?></a>
                                         </div>
                                     </div>
                                     <div class="flex items-center mt-3">
@@ -100,8 +101,7 @@
 
                                     <div class="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
                                         <div class="relative">
-                                            <img src="assets/images/ads/<?php echo $ad->image; ?>" alt="">
-
+                                            <img src={{asset("/storage/".$ad->images->first()?->name)}} alt="rasm">
                                             <div class="absolute top-4 end-4">
 
                                                 <a href="ads/update/<?php echo $ad->id; ?>" class="icon-link">
