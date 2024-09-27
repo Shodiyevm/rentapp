@@ -34,7 +34,7 @@ public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo
 }
     public function bookmarkedByUsers(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
-        return $this->belongsToMany(User::class, 'bookmars', 'ad_id', 'user_id');
+        return $this->belongsToMany(User::class, 'bookmarks', 'ad_id', 'user_id');
     }
     public function images(): \Illuminate\Database\Eloquent\Relations\HasMany
     {

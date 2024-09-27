@@ -49,28 +49,28 @@
                                 <h5 class="text-xl font-semibold mt-4">Shaxsiy ma'lumotlar :</h5>
                                 <div class="mt-4">
                                     <div class="flex items-center">
-                                        <i data-feather="mail" class="fea icon-ex-md text-slate-400 me-3"></i>
+
                                         <div class="flex-1">
-                                            <h6 class="text-green-600 dark:text-white font-medium mb-0">Email :</h6>
+                                            <h6 class="text-green-600 dark:text-white font-medium mb-0">Name</h6>
                                             <a href="" class="text-slate-400"><?= $user->name ?></a>
                                         </div>
                                     </div>
                                     <div class="flex items-center mt-3">
-                                        <i data-feather="bookmark" class="fea icon-ex-md text-slate-400 me-3"></i>
+
                                         <div class="flex-1">
                                             <h6 class="text-green-600 dark:text-white font-medium mb-0">Position :</h6>
                                             <div class="text-slate-400"><?= $user->position ?></div>
                                         </div>
                                     </div>
                                     <div class="flex items-center mt-3">
-                                        <i class="mdi mdi-gender-male-female text-slate-400 me-3"></i>
+
                                         <div class="flex-1">
-                                            <h6 class="text-green-600 dark:text-white font-medium mb-0">Gender :</h6>
+                                            <h6 class="text-green-600 dark:text-white font-medium mb-0">Gender </h6>
                                             <div class="text-slate-400"><?= $user->position ?></div>
                                         </div>
                                     </div>
                                     <div class="flex items-center mt-3">
-                                        <i class="mdi mdi-phone text-slate-400 me-3"></i>
+
                                         <div class="flex-1">
                                             <h6 class="text-green-600 dark:text-white font-medium mb-0">phone :</h6>
                                             <div class="text-slate-400"><?= $user->phone ?></div>
@@ -121,19 +121,17 @@
 
                                             <ul class="py-6 border-y border-slate-100 dark:border-gray-800 flex items-center list-none">
                                                 <li class="flex items-center me-4">
-                                                    <i class="mdi mdi-compress-arrows text-2xl me-2 text-green-600"></i>
+                                                    <i class="uil uil-home icons text-2xl me-2 text-green-600"></i>
                                                     <span><?php echo $ad->rooms?></span>
                                                 </li>
 
                                                 <li class="flex items-center me-4">
-                                                    <i class="mdi mdi-bed-double text-2xl me-2 text-green-600"></i>
-                                                    <span>4 Beds</span>
+                                                    <i class="uil uil-users-alt icons text-2xl me-2 text-green-600"></i>
+                                                    <span>{{ $ad->gender}} </span>
                                                 </li>
 
-                                                <li class="flex items-center">
-                                                    <i class="mdi mdi-bath text-2xl me-2 text-green-600"></i>
-                                                    <span>4 Baths</span>
-                                                </li>
+
+
                                             </ul>
 
                                             <ul class="pt-6 flex justify-between items-center list-none">
