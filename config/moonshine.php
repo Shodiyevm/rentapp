@@ -75,7 +75,7 @@ return [
             'name' => 'name',
             'avatar' => 'avatar',
         ],
-        'guard' => 'moonshine',
+        'guard' => 'web',
         'guards' => [
             'moonshine' => [
                 'driver' => 'session',
@@ -83,9 +83,9 @@ return [
             ],
         ],
         'providers' => [
-            'moonshine' => [
+            'users' => [
                 'driver' => 'eloquent',
-                'model' => MoonshineUser::class,
+                'model' => env('AUTH_MODEL', App\Models\User::class),
             ],
         ],
         'pipelines' => [],

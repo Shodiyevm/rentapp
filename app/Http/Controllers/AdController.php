@@ -7,6 +7,7 @@ use App\Models\Branch;
 use App\Models\Images;
 use App\Models\Status;
 use Faker\Factory;
+use Faker\Provider\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
@@ -29,8 +30,6 @@ class AdController extends Controller
                }
             ])->get();
             return view('ads.index' ,compact('branches','ads'));
-
-
     }
 
     /**
