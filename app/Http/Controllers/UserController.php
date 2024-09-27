@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ad;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -28,6 +29,13 @@ class UserController extends Controller
         $user = User::withCount('bookmarks')->find(auth()->id());
 
 
+    }
+
+    public function profile(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory
+    {
+        $user=auth()->user();
+        $ads = Ad::all();
+      return view('ads.profile',compact('user','ads'));
     }
 
 }

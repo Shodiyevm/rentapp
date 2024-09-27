@@ -18,6 +18,7 @@ class Ad extends Model
         'statuses_id',
          'users_id',
         'branches_id',
+         'gender',
         'image'];
 public function branch(): \Illuminate\Database\Eloquent\Relations\BelongsTo
 {

@@ -14,7 +14,8 @@ Route::get('branches',[\App\Http\Controllers\BranchController::class,'index' ]);
 Route::get('/contact',[\App\Http\Controllers\AdController::class,'contact']);
 Route::get('/branch/{id}',[\App\Http\Controllers\BranchController::class,'branch' ]);
 Route::post("/ads/{id}/bookmark",[\App\Http\Controllers\UserController::class ,  "toggleBookmark"]);
-//Route::get('/ads/{id}' ,[AdController::class,'show']);
+Route::get('/my/profile',[\App\Http\Controllers\UserController::class, 'profile']);
+Route::get('/ads/{id}' ,[AdController::class,'show']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

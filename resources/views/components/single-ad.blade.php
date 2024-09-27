@@ -8,8 +8,8 @@
                 <div class="grid grid-cols-1 relative">
                     <div class="tiny-one-item">
                         <div class="tiny-slide">
-                            <img src="{{$ad->image}}"
-                              class="rounded-md shadow dark:shadow-gray-700" alt="">
+                            <img src={{asset("/storage/".$ad->images->first()?->name)}} alt="rasm"
+                               class="rounded-md shadow dark:shadow-gray-700" alt="">
                         </div>
 
                         <div class="tiny-slide">

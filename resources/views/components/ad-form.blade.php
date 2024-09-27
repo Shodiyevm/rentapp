@@ -21,6 +21,7 @@ Qabul qilinadigan kengaytmalar: JPG, PNG
             </div>
         </div>
 
+
         <div class="rounded-md shadow dark:shadow-gray-700 p-6 bg-white dark:bg-slate-900 h-fit">
             <form id="ads-create" action="{{ $action }}" method="post" enctype="multipart/form-data">
                 @csrf
@@ -69,6 +70,8 @@ Qabul qilinadigan kengaytmalar: JPG, PNG
             @endforeach
         </select>
     </div>
+
+
 </div>
 <div class="col-span-12">
     <label for="price" class="font-medium">Narxi:</label>
@@ -78,14 +81,31 @@ Qabul qilinadigan kengaytmalar: JPG, PNG
                placeholder="Narxi($):" value="{{ $ad?->price }}">
     </div>
 </div>
-<div class="col-span-12">
-    <label for="rooms" class="font-medium">Xonalar:</label>
-    <div class="form-icon relative mt-2">
-        <input name="rooms" id="rooms" type="number" class="form-input ps-11"
-               placeholder="Xonalar:" value="{{ $ad?->rooms }}">
-    </div>
+                    <div class="col-span-12">
+                        <!-- Xonalar qismi -->
+                        <div class="col-span-6">
+                            <label for="rooms" class="font-medium">Xonalar:</label>
+                            <div class="form-icon relative mt-2">
+                                <input name="rooms" id="rooms" type="number" class="form-input ps-11"
+                                       placeholder="Xonalar:" value="{{ $ad?->rooms }}">
+                            </div>
+                        </div>
+
+
+                        <div class="col-span-6">
+                            <label for="gender" class="font-medium">Gender:</label>
+                            <div class="form-icon relative mt-2">
+                                <select name="gender" id="gender" class="form-input ps-11">
+                                    <option value="{{$ad?->gender}}">male</option>
+                                    <option value="{{$ad?->gender}}">female</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
 </div>
-</div>
+
 
 <button type="submit" id="submit" name="send"
         class="btn bg-green-600 hover:bg-green-700 border-green-600 hover:border-green-700 text-white rounded-md mt-5">

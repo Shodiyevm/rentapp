@@ -55,7 +55,7 @@ class AdController extends Controller
             'title'=>['required' => 'Titlini kiritish majburiy'],
             'description' => ['required' => 'Izoh kiritish majburiy'],
         ]);
-//     dd($request->all());
+
         $ad = Ad::query()->create([
             'title' => $request->input("title"),
             'description' => $request->input("description"),
@@ -65,7 +65,7 @@ class AdController extends Controller
             'branches_id' => $request->input("branch_id"),
             'price' => $request->input("price"),
             'rooms' => $request->input("rooms"),
-
+             'gender'=>$request->input("gender")
 
         ]);
 
@@ -111,6 +111,7 @@ class AdController extends Controller
     {
         //
     }
+
 
 
     public function find(Request $request): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Foundation\Application
