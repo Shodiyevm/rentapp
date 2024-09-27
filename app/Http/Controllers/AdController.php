@@ -20,8 +20,14 @@ class AdController extends Controller
      */
     public function index()
     {
-            $ads= Ad::all();
+
             $branches=Branch::all();
+            $userId = auth()->id();
+            $ads = Ad::query()->withCount([
+               'bookmarkedByUsers as bookmarked' => function ($query) use ($userId) {
+                $query->where('user_id', $userId);
+               }
+            ])->get();
             return view('ads.index' ,compact('branches','ads'));
 
 
