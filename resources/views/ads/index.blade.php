@@ -1,7 +1,7 @@
 
 <x-layouts.main>
 
-{{--@dd($ads);--}}
+
     <!-- Hero Start -->
     <section class="relative mt-20">
         <div class="container-fluid md:mx-4 mx-2">
@@ -97,7 +97,7 @@
 
                     <div class="group rounded-xl bg-white dark:bg-slate-900 shadow hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
                         <div class="relative">
-                            <img src={{(new \App\Actions\DisplayAdImage())($ad)}} alt="rasm">
+                            <img src="{{(new \App\Actions\DisplayAdImage())($ad)}}" alt="">
 
 
 

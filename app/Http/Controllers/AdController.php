@@ -74,13 +74,16 @@ class AdController extends Controller
 
         ]);
 
-        $file = Storage::disk('public')->put('/', $request->image);
+        if ($request->hasFile('image')) {
+            $file = Storage::disk('public')->put('/', $request->image);
 
-        Images::query()->create([
-            'ad_id' => $ad->id,
-            'name' => $file
-        ]);
-        return redirect('/');
+            Images::query()->create([
+                'ad_id' => $ad->id,
+                'name'  => $file,
+            ]);
+        }
+
+        return redirect(route('home'))->with('message', "E'lon yaratildi");
     }
 
 
@@ -140,7 +143,7 @@ class AdController extends Controller
         }
         $ads = $ads->with('branch')->get();
         $branches = Branch::all();
-        return view('home', compact('ads', 'branches'));
+        return view('ads.index', compact('ads', 'branches'));
     }
 
 
