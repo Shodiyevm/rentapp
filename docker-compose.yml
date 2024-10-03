@@ -1,19 +1,19 @@
 services:
     nginx:
-        container_name: nginx
+        container_name: nginxs
         image: nginx:alpine  # Use the Nginx image
         ports:
-            - "8081:80"  # Map port 8080 on the host to port 80 inside the container
+            - "8083:80"  # Map port 8080 on the host to port 80 inside the container
         volumes:
             - ./:/var/www  # Mount the Laravel application directory
             - ./nginx.conf:/etc/nginx/conf.d/default.conf  # Use our Nginx config
         depends_on:
-            - app  # Ensure PHP-FPM is started before Nginx
+            - app # Ensure PHP-FPM is started before Nginx
         networks:
             - laravel-network  # Connect to the custom network
 
     app:
-        container_name: app
+        container_name: appp
         build: .  # Build from the Dockerfile
         depends_on:
             - db
@@ -23,21 +23,21 @@ services:
             - laravel-network  # Connect to the custom network
 
     db:
-        container_name: rent_app_db
+        container_name: rent_ap_db
         image: mysql:8  # Use MySQL image
         restart: always
         ports:
-            - "3307:3306"
+            - "3308:3306"
         environment:
-            MYSQL_DATABASE: rent_app  # Create a database named 'laravel'
+            MYSQL_DATABASE: rent  # Create a database named 'laravel'
             MYSQL_ROOT_PASSWORD: root  # Set the root password for MySQL
         volumes:
-            - rent_app_db:/var/lib/mysql  # Persist MySQL data
+            - rent_ap_db:/var/lib/mysql  # Persist MySQL data
         networks:
             - laravel-network  # Connect to the custom network
 
     node:
-        container_name: node
+        container_name: nodes
         image: node:20
         working_dir: /var/www
         volumes:
@@ -53,4 +53,4 @@ networks:
 
 # Define the volume for MySQL data persistence
 volumes:
-    rent_app_db:
+    rent_ap_db:
