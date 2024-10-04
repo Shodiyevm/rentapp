@@ -2,6 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Branch;
+use App\Models\Status;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -22,10 +25,11 @@ class AdFactory extends Factory
             'address' => $this->faker->address,
             'price' => $this->faker->numberBetween(100, 1000),
             'rooms' => $this->faker->numberBetween(1, 5),
-            'users_id' => 1,
-            'branches_id' => 1,
-            'statuses_id' => 1,
+            'users_id' =>User::factory(),
+            'branches_id' => Branch::factory(),
+            'statuses_id' => Status::factory(),
             'description' => $this->faker->paragraph,
+
         ];
     }
 

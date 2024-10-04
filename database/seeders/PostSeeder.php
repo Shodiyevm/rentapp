@@ -17,20 +17,26 @@ class PostSeeder extends Seeder
     public function run(): void
     {
         $faker = Faker::create();
+        $user = User::factory()->create();
+        $branch = Branch::factory()->create();
+        $status = Status::factory()->create();
 
         DB::table('ads')->insert([
             'title' => $faker->sentence(5),
-            'image' => $faker->imageUrl(640, 480, 'animals', true),
             'address' => $faker->address,
             'price' => $faker->numberBetween(100, 1000),
             'rooms' => $faker->numberBetween(1, 5),
             'description' => $faker->paragraph,
-             'users_id' => User::factory(),
-             'branches_id' => Branch::factory(),
-             'statuses_id' => Status::factory(),
+            'users_id' => $user->id,
+            'branches_id' => $branch->id,
+            'statuses_id' => $status->id,
         ]);
         Ad::factory()
             ->count(5)
-            ->create();
+            ->create([
+                'users_id' => User::factory(),
+                'branches_id' => Branch::factory(),
+                'statuses_id' => Status::factory(),
+            ]);
     }
 }
