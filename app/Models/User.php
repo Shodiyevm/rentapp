@@ -14,11 +14,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 {
     use HasFactory, Notifiable , HasApiTokens ;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
+
     public function bookmarkAds(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
         return $this->belongsToMany(Ad::class, 'bookmarks', 'user_id', 'ad_id');
@@ -42,11 +38,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
         'remember_token',
     ];
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
+
     protected function casts(): array
     {
         return [

@@ -25,9 +25,9 @@ class PostSeeder extends Seeder
             'price' => $faker->numberBetween(100, 1000),
             'rooms' => $faker->numberBetween(1, 5),
             'description' => $faker->paragraph,
-            'users_id' => User::factory(),
-            'branches_id' => Branch::factory(),
-            'statuses_id' => Status::factory(),
+             'users_id' => User::factory(),
+             'branches_id' => Branch::factory(),
+             'statuses_id' => Status::factory(),
         ]);
         Ad::factory()
             ->count(5)
