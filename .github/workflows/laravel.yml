@@ -47,4 +47,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script: whoami
+          script: |
+             cd rentapp
+              git pull 
+              docker-compose -f docker-compose.production.yml up -d --build
+              docker exec  store_app php artisan optimize
