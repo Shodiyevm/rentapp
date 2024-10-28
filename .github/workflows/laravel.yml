@@ -51,5 +51,5 @@ jobs:
             script: |
                  cd rentapp || exit 1  
                  git pull
-                 docker-compose -f docker-compose.production.yml up -d --build
+                 docker-compose -f docker-compose.yml up -d --build
                  docker exec rent_app php artisan optimize
