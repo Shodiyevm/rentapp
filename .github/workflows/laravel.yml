@@ -48,7 +48,8 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-             cd rentapp
-              git pull 
-              docker-compose -f docker-compose.production up -d --build
-              docker exec  rent_app php artisan optimize
+            script: |
+                 cd rentapp || exit 1  
+                 git pull
+                 docker-compose -f docker-compose.production.yml up -d --build
+                 docker exec rent_app php artisan optimize
