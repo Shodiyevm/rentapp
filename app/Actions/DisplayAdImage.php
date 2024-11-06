@@ -14,6 +14,6 @@ class DisplayAdImage
         if ($image) {
             return "/storage/$image";
         }
-        return "/storage/images/default-ad.jpg";
+        return "/storage/default-ad.jpg";
     }
 }
