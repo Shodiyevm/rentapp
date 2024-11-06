@@ -49,7 +49,7 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             script: |
-                 cd rentapp || exit 1  
+                 cd rentapp 
                  git pull
                  docker-compose -f docker-compose.yml up -d --build
                  docker exec rent_app php artisan optimize
